@@ -1,0 +1,367 @@
+{% extends "base.html" %}
+
+{% block title %}M1 Labs - Tools for Performance{% endblock %}
+
+{% block extra_css %}
+<!-- All styles are now in style.css -->
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-content">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in-up" id="hero-text">
+                <h1 class="display-4 fw-bold mb-4">
+                    <span>Tap Into Your</span><br>
+                    <span class="accent-text">Highest State</span>
+                </h1>
+                <p class="lead mb-4">Designed for clarity. Built for energy. At M1 Labs, we create tools for your mind to evolve beyond limits.</p>
+                <div class="horizontal-line"></div>
+                <div class="d-flex gap-3">
+                    <a href="#synq" class="btn btn-gradient">Discover Synq</a>
+                    <a href="#blyss" class="btn btn-outline-light">Explore Blyss</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center fade-in-up" id="hero-image">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="position-relative">
+                            <div class="ios-device">
+                                <div class="ios-notch"></div>
+                                <img src="https://placehold.co/450x900/242629/e6e6e6.png?text=SYNQ" alt="Synq App Screenshot" class="img-fluid rounded-3 app-screenshot">
+                            </div>
+                            <div class="position-absolute" style="top: -20px; right: -20px; width: 100px; height: 100px; background: var(--primary-color); opacity: 0.05; filter: blur(40px); border-radius: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="position-relative">
+                            <div class="ios-device">
+                                <div class="ios-notch"></div>
+                                <img src="https://placehold.co/450x900/242629/e6e6e6.png?text=BLYSS" alt="Blyss App Screenshot" class="img-fluid rounded-3 app-screenshot">
+                            </div>
+                            <div class="position-absolute" style="bottom: -30px; left: -30px; width: 100px; height: 100px; background: var(--primary-color); opacity: 0.05; filter: blur(40px); border-radius: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Synq App Section -->
+<section id="synq" class="py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 order-lg-2 mb-5 mb-lg-0 fade-in-up">
+                <div class="position-relative">
+                    <img src="https://placehold.co/800x1600/242629/e6e6e6.png?text=SYNQ+App+Screenshot" alt="Synq App Screenshot" class="img-fluid app-screenshot">
+                    <div class="position-absolute" style="top: -20px; right: -20px; width: 200px; height: 200px; background: var(--primary-color); opacity: 0.05; filter: blur(60px); border-radius: 50%;"></div>
+                    
+                    <!-- Tech circuit lines -->
+                    <div class="position-absolute" style="top: 10%; left: -30px; width: 50px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 30%; left: -20px; width: 30px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 50%; left: -40px; width: 70px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 70%; left: -25px; width: 40px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 90%; left: -15px; width: 25px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                </div>
+            </div>
+            <div class="col-lg-7 order-lg-1 fade-in-up">
+                <h2 class="section-heading">Synq</h2>
+                <p class="lead mb-4">The ultimate self-study platform for biohackers.</p>
+                <p class="mb-4">Synq empowers biohackers to analyze the effectiveness of nootropics, lifestyle practices, or combinations of these on various metrics including mood, energy, cognition, and health markers like sleep and heart rate.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>In-depth Analytics</h4>
+                            <p>Visualize how different supplements and practices affect your personalized metrics during trial periods compared to baseline.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4>Customizable Metrics</h4>
+                            <p>Track any type of metric that matters to you - create your own experiments and see what truly works.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h4>Stack Builder</h4>
+                            <p>Create and test combinations of nootropics and lifestyle practices to optimize your cognitive performance.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>Cognitive Tracking</h4>
+                            <p>Monitor changes in your mental performance with detailed tracking of cognitive functions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <p class="text-uppercase mb-4 monospace" style="letter-spacing: 2px; font-size: 0.9rem; color: var(--primary-color);">Follow for updates</p>
+                    <a href="https://instagram.com/synq.daily" target="_blank" class="btn btn-outline-light me-3">
+                        <i class="fab fa-instagram me-2"></i> synq.daily
+                    </a>
+                    <a href="https://tiktok.com/@synq.daily" target="_blank" class="btn btn-outline-light">
+                        <i class="fab fa-tiktok me-2"></i> synq.daily
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blyss App Section -->
+<section id="blyss" class="py-5 accent-section">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0 fade-in-up">
+                <div class="position-relative">
+                    <img src="https://placehold.co/800x1600/242629/e6e6e6.png?text=BLYSS+App+Screenshot" alt="Blyss App Screenshot" class="img-fluid app-screenshot">
+                    <div class="position-absolute" style="bottom: -20px; left: -20px; width: 200px; height: 200px; background: var(--primary-color); opacity: 0.05; filter: blur(60px); border-radius: 50%;"></div>
+                    
+                    <!-- Circuit board pattern -->
+                    <div class="position-absolute" style="top: 0; right: -30px; width: 1px; height: 30%; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 0; right: -30px; width: 40px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 15%; right: -30px; width: 60px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="top: 30%; right: -30px; width: 1px; height: 40%; background: var(--primary-color); opacity: 0.5;"></div>
+                    <div class="position-absolute" style="bottom: 0; right: -30px; width: 20px; height: 1px; background: var(--primary-color); opacity: 0.5;"></div>
+                </div>
+            </div>
+            <div class="col-lg-7 fade-in-up">
+                <h2 class="section-heading">Blyss</h2>
+                <p class="lead mb-4">Enhancing productivity and mental wellness for high performance.</p>
+                <p class="mb-4">Blyss provides a comprehensive suite of tools to help you maintain optimal mental health and prepare for high-performance activities. From meditation timers to breathing exercises, journaling, and flow state games - Blyss helps you mentally prepare for the tasks that matter.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-meditation"></i>
+                            </div>
+                            <h4>Meditation Timer</h4>
+                            <p>Guided and customizable meditation sessions to help center your mind before important tasks.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <h4>Relief Breathing</h4>
+                            <p>Science-backed breathing exercises to reduce stress and improve mental clarity.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Journaling</h4>
+                            <p>Structured journaling to process thoughts and prepare for high-stakes situations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>Cues Task Management</h4>
+                            <p>Schedule daily tasks with media attachments and mental preparation exercises for peak performance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <p class="text-uppercase mb-4 monospace" style="letter-spacing: 2px; font-size: 0.9rem; color: var(--primary-color);">Follow for updates</p>
+                    <a href="https://instagram.com/blyss.daily" target="_blank" class="btn btn-outline-light me-3">
+                        <i class="fab fa-instagram me-2"></i> blyss.daily
+                    </a>
+                    <a href="https://tiktok.com/@blyss.daily" target="_blank" class="btn btn-outline-light">
+                        <i class="fab fa-tiktok me-2"></i> blyss.daily
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center fade-in-up">
+                <h2 class="section-heading mb-4">About M1 Labs</h2>
+                <p class="lead mb-5">We're on a mission to empower individuals to reach their full potential.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 fade-in-up">
+                <div class="position-relative p-4">
+                    <div class="position-absolute" style="top: 0; left: 0; width: 2px; height: 50px; background: var(--primary-color); opacity: 0.7;"></div>
+                    <div class="position-absolute" style="top: 0; left: 0; width: 50px; height: 2px; background: var(--primary-color); opacity: 0.7;"></div>
+                    
+                    <p>At M1 Labs, we believe everyone has untapped potential waiting to be unlocked. Our journey began with a simple question: how can technology help people become better versions of themselves?</p>
+                    <p>This question led us to create two revolutionary apps that approach human potential from different angles:</p>
+                    <ul>
+                        <li><strong class="accent-text">Synq</strong> - For those who want to optimize their biology and understand what truly works for their unique physiology.</li>
+                        <li><strong class="accent-text">Blyss</strong> - For those seeking to enhance their mental state and performance through mindfulness and structured preparation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 fade-in-up">
+                <div class="position-relative p-4">
+                    <div class="position-absolute" style="bottom: 0; right: 0; width: 2px; height: 50px; background: var(--primary-color); opacity: 0.7;"></div>
+                    <div class="position-absolute" style="bottom: 0; right: 0; width: 50px; height: 2px; background: var(--primary-color); opacity: 0.7;"></div>
+                
+                    <p>Our philosophy is rooted in the belief that small, consistent improvements lead to extraordinary results. Whether it's understanding how a supplement affects your focus or preparing mentally for an important presentation, our apps provide the tools to enhance your capabilities.</p>
+                    <p>We combine cutting-edge technology with research-backed approaches to create experiences that are not just useful, but transformative. Our team is dedicated to continuous innovation and refinement, always seeking new ways to help our users achieve more in their daily lives.</p>
+                    <p>M1 Labs isn't just about apps – it's about empowering a community of individuals committed to growth, self-improvement, and reaching new heights of human potential.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 accent-section">
+    <div class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center fade-in-up">
+                <h2 class="section-heading">Get In Touch</h2>
+                <p class="lead">Have questions or feedback? We'd love to hear from you.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 fade-in-up">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5">
+                        <form class="contact-form" action="{{ url_for('submit_contact') }}" method="post">
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-gradient">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                {% if request.args.get('contact_success') %}
+                <div class="alert alert-success mt-4" role="alert">
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fade in elements as they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Initialize first elements as visible (hero section)
+        document.querySelector('#hero-text').classList.add('visible');
+        setTimeout(function() {
+            document.querySelector('#hero-image').classList.add('visible');
+        }, 300);
+        
+        // Create and add horizontal lines for sections
+        const addHorizontalLines = () => {
+            document.querySelectorAll('section').forEach((section, index) => {
+                if (index > 0) {
+                    const line = document.createElement('div');
+                    line.className = 'horizontal-line';
+                    section.prepend(line);
+                }
+            });
+        };
+        
+        // Add a subtle scanline effect
+        const addScanline = () => {
+            const scanline = document.createElement('div');
+            scanline.style.position = 'fixed';
+            scanline.style.top = '0';
+            scanline.style.left = '0';
+            scanline.style.width = '100%';
+            scanline.style.height = '1px';
+            scanline.style.background = 'var(--primary-color)';
+            scanline.style.opacity = '0.6';
+            scanline.style.zIndex = '9999';
+            scanline.style.pointerEvents = 'none';
+            scanline.style.animation = 'scanLine 8s linear infinite';
+            document.body.appendChild(scanline);
+        };
+        
+        // Create minimal particles
+        const createParticles = () => {
+            const particleBg = document.createElement('div');
+            particleBg.className = 'particle-bg';
+            document.querySelector('.hero-content').appendChild(particleBg);
+            
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 3 + 1; // 1-4px (smaller particles)
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.opacity = Math.random() * 0.3 + 0.05; // More subtle opacity
+                particle.style.animationDuration = `${Math.random() * 20 + 20}s`; // Slower movement
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particleBg.appendChild(particle);
+            }
+        };
+        
+        addScanline();
+        createParticles();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,604 @@
+/* M1 Labs Website Styles - Minimal Black & White Theme with Teal Accents */
+
+/* Global Styles */
+:root {
+    --primary-color: #4ECDC4; /* Teal accent */
+    --dark-bg: #000000; /* True black for background */
+    --dark-surface: #111111; /* Nearly black for cards */
+    --medium-grey: #1E1E1E; /* Dark grey for subtle contrast */
+    --light-text: #FFFFFF; /* White for text */
+    --subtle-text: #AAAAAA; /* Light grey for secondary text */
+    --border-color: rgba(255, 255, 255, 0.08); /* Very subtle borders */
+    --horizontal-line: var(--primary-color); /* Color for accent lines */
+    --line-highlight: 0 0 3px rgba(78, 205, 196, 0.3); /* Subtle highlight for lines */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--dark-bg);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Minimalist grid lines */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 60px;
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+/* Horizontal accent line - similar to linear.app */
+.horizontal-line {
+    height: 1px;
+    width: 100%;
+    background: var(--horizontal-line);
+    opacity: 0.5;
+    margin: 3rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h1, h2, h3 {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.03em;
+}
+
+.display-4 {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.lead {
+    font-weight: 300;
+    letter-spacing: 0.01em;
+}
+
+.accent-text {
+    color: var(--primary-color);
+}
+
+.monospace {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--light-text);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link:focus::after,
+.navbar-dark .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--primary-color);
+}
+
+.navbar-brand {
+    position: relative;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    position: relative;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-gradient {
+    background-color: var(--primary-color);
+    border: none;
+    color: #000000;
+}
+
+.btn-gradient:hover {
+    background-color: #3CBCB4;
+    color: #000000;
+    transform: translateY(-1px);
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: var(--light-text);
+}
+
+.btn-outline-light:hover {
+    border-color: var(--light-text);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light-text);
+    transform: translateY(-1px);
+}
+
+.btn-link {
+    padding: 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-link::after {
+    content: '→';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -5px;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover::after {
+    opacity: 1;
+    right: -10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-bg);
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-color);
+    opacity: 0.3;
+}
+
+footer h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+footer a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    transform: translateX(5px);
+    color: var(--primary-color);
+}
+
+/* Section Styling */
+section {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+/* Connected sections with vertical lines */
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    opacity: 0.3;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+section:last-of-type::after {
+    display: none;
+}
+
+.accent-section {
+    background-color: var(--dark-surface);
+}
+
+.section-heading {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+/* Card styling */
+.card {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--border-color);
+}
+
+/* Hero section styles */
+.hero-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 0; /* Completely removed padding */
+}
+
+/* Adjust main content to account for smaller navbar */
+main {
+    padding-top: 65px; /* Adjusted to match new navbar height */
+}
+
+/* iOS Device Mockup */
+.ios-device {
+    position: relative;
+    padding: 12px;
+    border-radius: 40px;
+    background-color: #1a1a1a;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.ios-device::before {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 20px;
+    background-color: #1a1a1a;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+}
+
+.ios-notch {
+    position: absolute;
+    width: 50%;
+    height: 25px;
+    background-color: #1a1a1a;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}
+
+.ios-device:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(78, 205, 196, 0.2);
+}
+
+/* App screenshot styling */
+.app-screenshot {
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Feature styling */
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.feature-card {
+    padding: 2rem;
+    height: 100%;
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--primary-color);
+    transition: height 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover::before {
+    height: 100%;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Contact form styling */
+.contact-form .form-control {
+    background-color: var(--medium-grey);
+    border: 1px solid var(--border-color);
+    color: var(--light-text);
+    border-radius: 6px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+    color: var(--light-text);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--subtle-text);
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+/* Animated background elements */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    opacity: 0.02;
+}
+
+.animated-bg div {
+    position: absolute;
+    display: block;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: float 25s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
+
+/* Horizontal line accents */
+.horizontal-accent {
+    position: relative;
+}
+
+.horizontal-accent::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary-color);
+    opacity: 0.5;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .hero-content {
+        text-align: center;
+        padding-top: 6rem;
+    }
+    
+    .text-lg-start {
+        text-align: center !important;
+    }
+    
+    .order-lg-1 {
+        order: 2;
+    }
+    
+    .order-lg-2 {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-screenshot {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    section {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .app-screenshot {
+        max-width: 90%;
+    }
+    
+    .hero-content {
+        min-height: 80vh;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Fix for Font Awesome Icons */
+.fa-meditation:before {
+    content: "\f67c"; /* This is actually fa-spa */
+}
+
+.fa-tasks:before {
+    content: "\f0ae";
+}
+
+/* Custom Logo Styling */
+.navbar-brand {
+    position: relative;
+    padding: 0 !important;
+    margin: 5px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto !important;
+    min-width: auto !important;
+}
+
+/* Ultra-specific selector to ensure this rule takes precedence */
+body .navbar .container .navbar-brand img {
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1); /* Make logo white on black background */
+    height: auto !important;
+    width: auto !important;
+    max-width: 100px !important;
+    max-height: 40px !important;
+    min-height: auto !important;
+    object-fit: contain;
+    display: block !important;
+    transform: none !important;
+}
+
+/* Normal navbar height */
+.navbar {
+    min-height: 60px !important;
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
