@@ -7,7 +7,7 @@ A modern, responsive website for M1 Labs showcasing their core products: Synq an
 This website serves as the new online presence for M1 Labs, highlighting the company's innovative iOS applications:
 
 - **Synq**: A self-study platform for biohackers that helps users analyze the effectiveness of nootropics, lifestyle practices, and combinations of these on various metrics.
-- **Blyss**: A productivity and wellness enhancement tool providing meditation timers, breathing exercises, journaling capabilities, and a flow state game.
+- **Blyss**: An AI-powered meditation and wellness companion featuring custom guided meditations, intelligent wellness insights, breathing exercises, and reflective journaling.
 
 ## Features
 
