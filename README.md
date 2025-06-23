@@ -6,7 +6,7 @@ A modern, responsive website for M1 Labs showcasing their AI-powered application
 
 This website serves as the online presence for M1 Labs, highlighting the company's AI-powered applications that help users achieve more, learn more, and become better versions of themselves:
 
-- **Synq**: An AI-powered biohacking platform featuring multi-model intelligence (GPT-4, Claude, Gemini) that delivers evidence-based supplement and lifestyle recommendations backed by 5,000+ scientific citations.
+- **Synq**: An AI-powered biohacking platform featuring the proprietary Synqology Analytics system that processes health data through advanced statistical analysis and correlation calculations on our servers, then leverages Claude AI for evidence-based supplement and lifestyle recommendations backed by 5,000+ scientific citations.
 - **Blyss**: An AI-powered meditation and wellness companion that creates personalized mindfulness experiences using advanced voice synthesis, intelligent scheduling insights, breathing exercises, and reflective journaling.
 
 ## Features
