@@ -1,13 +1,13 @@
 # M1 Labs Website
 
-A modern, responsive website for M1 Labs showcasing their core products: Synq and Blyss. Built with Python (Flask) backend and modern front-end technologies.
+A modern, responsive website for M1 Labs showcasing their AI-powered applications: Synq and Blyss. Built with Python (Flask) backend and modern front-end technologies.
 
 ## Overview
 
-This website serves as the new online presence for M1 Labs, highlighting the company's innovative iOS applications:
+This website serves as the online presence for M1 Labs, highlighting the company's AI-powered applications that help users achieve more, learn more, and become better versions of themselves:
 
-- **Synq**: A self-study platform for biohackers that helps users analyze the effectiveness of nootropics, lifestyle practices, and combinations of these on various metrics.
-- **Blyss**: An AI-powered meditation and wellness companion featuring custom guided meditations, intelligent wellness insights, breathing exercises, and reflective journaling.
+- **Synq**: An AI-powered biohacking platform featuring multi-model intelligence (GPT-4, Claude, Gemini) that delivers evidence-based supplement and lifestyle recommendations backed by 5,000+ scientific citations.
+- **Blyss**: An AI-powered meditation and wellness companion that creates personalized mindfulness experiences using advanced voice synthesis, intelligent scheduling insights, breathing exercises, and reflective journaling.
 
 ## Features
 
